@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing template for a project</title>
+    <meta name="description" content="Testing template for a project (Description_1)">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" as="image" href="images/castle.jpg" imagesrcset="images/castle.jpg 1x" />
+    <meta name="color-scheme" content="light dark">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="#" class="brand">
+                <span class="brand-badge"></span>
+                <span class="brand-name">OŠ "Huso Hodžić"</span>
+            </a>
+            <nav class="nav-links">
+                <a class="btn ghost" href="#home">Pocetna</a>
+                <a class="btn ghost" href="#about">O projektu</a>
+                <a class="btn ghost" href="#gallery">Galerija</a>
+                <button id="themeToggle" class="btn" type="button">🌓 Auto</button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero" style="--hero-bg: url('images/castle.jpg');">
+        <div class="container hero-wrap">
+            <div class="stack">
+                <h1>Naša baština - naš ponos: učenički pogled na kulturne spomenike</h1>
+                <p>
+                    Ova web stranica rezultat je kreativnog rada učenika devetih razreda OŠ "Huso Hodžić", koji su realizovali projekat kroz servisno učenje na temu "Naša baština – naš ponos: učenički pogled na kulturne spomenike".
+                </p>
+                <div class="hero-cta">
+                    <a class="btn primary" href="#gallery">Gledaj galeriju</a>
+                    <a class="btn" href="#about">Saznaj više</a>
+                </div>
+            </div>
+
+            <div class="slideshow">
+                <div class="slides">
+                    <img class="slide is-active" src="images/DZAMIJA.jpg" alt="Slika 1">
+                    <img class="slide" src="images/EMINAGICA.jpg" alt="Slika 2">
+                    <img class="slide" src="images/GRADINA.jpg" alt="Slika 3">
+                </div>
+
+                <button class="slide-nav prev">‹</button>
+                <button class="slide-nav next">›</button>
+
+                <div class="dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Galerija slika</h2>
+                <p class="muted">Klikni na sliku za uvećan prikaz. Sve slike se automatski adaptiraju na veličinu.</p>
+            </div>
+
+            <div class="gallery grid">
+                <figure class="card tall">
+                    <img src="images/MUSA.jpg" alt="Musa Ćazim Ćatić">
+                    <figcaption>Musa Ćazim Ćatić</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="images/EMINAGICA.jpg" alt="Eminagića konak">
+                    <figcaption>Eminagića konak</figcaption>
+                </figure>
+
+                <figure class="card tall">
+                    <img src="images/GRADINA.jpg" alt="Gradina">
+                    <figcaption>Gradina</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="images/KATOLICKA CRKVA.jpg" alt="Katolička crkva">
+                    <figcaption>Katolička crkva</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="images/DZAMIJA.jpg" alt="Drvena džamija">
+                    <figcaption>Drvena džamija</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="images/PRAVOSLAVNA CRKVA.jpg" alt="Pravoslavna crkva">
+                    <figcaption>Pravoslavna crkva</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container two-col">
+            <div class="col">
+                <h2>O projektu</h2>
+                <p>
+                    Nakon što su učenici ispitali potrebe zajednice te proveli istraživanje uz podršku nastavnika, započeli su realizaciju projekta. Na radionicama su osmislili i naslikali vlastite ideje o najljepšim i najzanimljivijim mjestima u Tešnju. Potom su crteži pretvoreni u profesionalne letke i razglednice, koje predstavljaju spoj učeničke mašte i bogate kulturno-historijske baštine grada Tešnja. Kao završni korak, učenici su na ovoj web stranici predstavili svoj promotivni materijal u obliku razglednica i letaka. Pored toga, na svaku razglednicu i letak dodat je NFC tag i QR kod, putem kojih korisnici skeniranjem mogu dobiti informacije o prikazanoj slici.
+               </p>
+            </div>
+
+            <div class="col card-embed">
+                <div class="embed">
+                    <img src="images/about.jpg" alt="Project overview image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container foot">
+            <small>© <span id="year"></span>Presentation Project</small>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal" aria-hidden="true">
+        <button class="modal-close">×</button>
+        <img class="modal-img" alt="" />
+        <figcaption class="modal-cap"></figcaption>
+        <button class="modal-nav prev">‹</button>
+        <button class="modal-nav next">›</button>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
