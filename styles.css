@@ -123,6 +123,10 @@ img{display:block;max-width:100%;height:auto}
   box-shadow:var(--shadow);
 }
 
+.brand-name{
+  font-size:16px;
+}
+
 .nav-links{
   display:flex;
   gap:10px;
@@ -581,31 +585,47 @@ img{display:block;max-width:100%;height:auto}
 /* phones */
 @media (max-width:600px){
   .nav{
-    padding:8px var(--pad);
+    padding:8px var(--pad) 12px;
+    justify-content:flex-start;
   }
 
+  /* icons move to very top-right, smaller */
+  .social-icons{
+    top:8px;
+    right:var(--pad);
+    transform:none;
+  }
+
+  .social-icons img{
+    width:28px;
+    height:28px;
+  }
+
+  /* brand + nav stacked nicely under icons */
   .brand-nav-wrap{
     flex-direction:column;
-    gap:10px;
+    align-items:flex-start;
+    gap:8px;
+    margin-top:28px;   /* space under icons */
+  }
+
+  .brand-badge{
+    width:32px;
+  }
+
+  .brand-name{
+    font-size:14px;
   }
 
   .nav-links{
-    justify-content:center;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    row-gap:6px;
   }
 
   .btn{
     padding:8px 12px;
     font-size:14px;
-  }
-
-  .social-icons{
-    top:10px;
-    transform:none;
-  }
-
-  .social-icons img{
-    width:32px;
-    height:32px;
   }
 
   .hero h1{
