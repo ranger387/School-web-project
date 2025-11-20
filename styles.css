@@ -104,7 +104,7 @@ img{display:block;max-width:100%;height:auto}
 .brand-nav-wrap{
   display:flex;
   align-items:center;
-  gap:40px;
+  gap:40px; /* space between brand and buttons */
 }
 
 .brand{
@@ -133,7 +133,7 @@ img{display:block;max-width:100%;height:auto}
   flex-wrap:wrap;
 }
 
-/* external icons glued to far right of screen */
+/* external icons glued to far right */
 .social-icons{
   position:absolute;
   top:50%;
@@ -208,6 +208,14 @@ img{display:block;max-width:100%;height:auto}
     radial-gradient(1200px 800px at 10% -10%, rgba(79,140,255,.12), transparent 60%),
     radial-gradient(1000px 700px at 110% 10%, rgba(89,227,167,.10), transparent 55%);
   pointer-events:none;
+}
+
+/* HERO overlay for LIGHT THEME – remove dark overlay, make it bright */
+html[data-theme="light"] .hero::before{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(255,255,255,.92)),
+    radial-gradient(1200px 800px at 10% -10%, rgba(79,140,255,.10), transparent 60%),
+    radial-gradient(1000px 700px at 110% 10%, rgba(89,227,167,.08), transparent 55%);
 }
 
 .hero > .container{
@@ -448,7 +456,7 @@ img{display:block;max-width:100%;height:auto}
   background:rgba(0,0,0,.6);
   z-index:1000;
   padding:5vw;
-  overflow-y:auto;           /* allow scroll on tall content */
+  overflow-y:auto; /* scroll if tall */
 }
 
 .modal.is-open{
@@ -476,7 +484,6 @@ img{display:block;max-width:100%;height:auto}
   justify-content:center;
 }
 
-/* keep full image in view, no crop, auto width */
 .modal-img{
   max-height:clamp(60vh, 75vh, 80vh);
   width:auto;
@@ -494,7 +501,7 @@ img{display:block;max-width:100%;height:auto}
   flex-direction:column;
   justify-content:center;
   gap:8px;
-  color:var(--text);           /* theme-aware text color */
+  color:var(--text);      /* black in light, white in dark */
   word-break:break-word;
 }
 
@@ -508,10 +515,10 @@ img{display:block;max-width:100%;height:auto}
   margin:0;
   font-size:clamp(14px,1.5vw,16px);
   line-height:1.5;
-  color:var(--muted);          /* theme-aware secondary color */
+  color:var(--muted);     /* darker gray in light mode */
 }
 
-/* on small screens, image on top, text under */
+/* phones / narrow: image on top, text under, portrait-safe */
 @media (max-width:768px){
   .modal-inner{
     flex-direction:column;
@@ -523,7 +530,7 @@ img{display:block;max-width:100%;height:auto}
     flex:none;
   }
   .modal-img{
-    max-height:55vh;           /* smaller image so text fits */
+    max-height:50vh;      /* smaller so text fits */
   }
 }
 
