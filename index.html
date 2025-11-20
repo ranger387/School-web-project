@@ -3,34 +3,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naša baština – naš ponos</title>
-    <meta name="description" content="Testing template for a project (Description_1)">
+    <title>Testing template for a project</title>
+    <meta name="description" content="Testing template for a project (Description_1)" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preload" as="image" href="images/castle.jpg" imagesrcset="images/castle.jpg 1x" />
-    <meta name="color-scheme" content="light dark">
+    <meta name="color-scheme" content="light dark" />
 </head>
 <body>
     <header class="site-header">
         <div class="container nav">
-            <a href="#" class="brand">
-                <span class="brand-badge"></span>
-                <span class="brand-name">OŠ "Huso Hodžić"</span>
-            </a>
-            <nav class="nav-links">
-                <a class="btn ghost" href="#home">Pocetna</a>
-                <a class="btn ghost" href="#about">O projektu</a>
-                <a class="btn ghost" href="#gallery">Galerija</a>
-                <button id="themeToggle" class="btn" type="button">🌓 Auto</button>
-            </nav>
+            <div class="brand-nav-wrap">
+                <!-- LEFT SIDE: logo -->
+                <a href="#" class="brand">
+                    <span class="brand-badge"></span>
+                    <span class="brand-name">OŠ "Huso Hodžić"</span>
+                </a>
+
+                <!-- RIGHT SIDE: nav links + theme button + icons -->
+                <div class="header-right">
+
+                <nav class="nav-links">
+                    <a class="btn ghost" href="#home">Pocetna</a>
+                    <a class="btn ghost" href="#about">O projektu</a>
+                    <a class="btn ghost" href="#gallery">Galerija</a>
+                    <button id="themeToggle" class="btn" type="button">🌓 Auto</button>
+                </nav>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.opcina-tesanj.ba" target="_blank">
+                    <img src="images/TESANJ.png" alt="Tesanj">
+                </a>
+                <a href="https://muzejtesanj.ba" target="_blank">
+                    <img src="images/MUZEJ.png" alt="Muzej Tešanj">
+                </a>
+                <a href="https://www.facebook.com/share/19t6ZhqSnB/" target="_blank">
+                    <img src="images/FACEBOOK.png" alt="Facebook">
+                </a>
+            </div>
+
+            </div>
         </div>
     </header>
 
-    <section id="home" class="hero" style="--hero-bg: url('images/castle.jpg');">
+    <section id="home" class="hero">
         <div class="container hero-wrap">
             <div class="stack">
-                <h1>Naša baština - naš ponos: učenički pogled na kulturne spomenike</h1>
+                <h1>Naša baština – naš ponos: učenički pogled na kulturne spomenike</h1>
                 <p>
-                    Ova web stranica rezultat je kreativnog rada učenika devetih razreda OŠ "Huso Hodžić", koji su realizovali projekat kroz servisno učenje na temu "Naša baština – naš ponos: učenički pogled na kulturne spomenike".
+                    Ova web stranica rezultat je kreativnog rada učenika devetih razreda OŠ "Huso Hodžić", koji su
+                    realizovali projekat kroz servisno učenje na temu "Naša baština – naš ponos: učenički pogled na
+                    kulturne spomenike".
                 </p>
                 <div class="hero-cta">
                     <a class="btn primary" href="#gallery">Gledaj galeriju</a>
@@ -40,14 +62,12 @@
 
             <div class="slideshow">
                 <div class="slides">
-                    <img class="slide is-active" src="images/DZAMIJA.jpg" alt="Slika 1">
-                    <img class="slide" src="images/EMINAGICA.jpg" alt="Slika 2">
-                    <img class="slide" src="images/GRADINA.jpg" alt="Slika 3">
+                    <img class="slide is-active" src="images/DZAMIJA.jpg" alt="Drvena džamija" />
+                    <img class="slide" src="images/EMINAGICA.jpg" alt="Eminagića konak" />
+                    <img class="slide" src="images/GRADINA.jpg" alt="Gradina" />
                 </div>
-
                 <button class="slide-nav prev">‹</button>
                 <button class="slide-nav next">›</button>
-
                 <div class="dots"></div>
             </div>
         </div>
@@ -57,37 +77,63 @@
         <div class="container">
             <div class="section-head">
                 <h2>Galerija slika</h2>
-                <p class="muted">Klikni na sliku za uvećan prikaz. Sve slike se automatski adaptiraju na veličinu.</p>
+                <p class="muted">
+                    Klikni na sliku za uvećan prikaz. Sve slike se automatski adaptiraju na veličinu.
+                </p>
             </div>
 
             <div class="gallery grid">
                 <figure class="card tall">
-                    <img src="images/MUSA.jpg" alt="Musa Ćazim Ćatić">
+                    <img
+                        src="images/MUSA.jpg"
+                        alt="Musa Ćazim Ćatić"
+                        data-desc="Musa Ćazim Ćatić (rođen 12. marta 1878. u Odžaku, umro 6. aprila 1915. u Tešnju) bio je jedan od najznačajnijih bosanskohercegovačkih pjesnika moderne. Bio je urednik časopisa Behar i Biser te je preveo značajan broj djela s turskog, arapskog i perzijskog jezika. Njegova poezija često je melankolična, s ljubavnim, mističnim i religioznim motivima. Umjetnički je spajao istočnjačku inspiraciju i svoje muslimansko porijeklo s evropskim simbolizmom. Lik Muse Ćazima Ćatića prikazan je na novčanici od 50 konvertibilnih maraka."
+                    />
                     <figcaption>Musa Ćazim Ćatić</figcaption>
                 </figure>
 
                 <figure class="card">
-                    <img src="images/EMINAGICA.jpg" alt="Eminagića konak">
+                    <img
+                        src="images/EMINAGICA.jpg"
+                        alt="Eminagića konak"
+                        data-desc="Eminagića konak je tradicionalna bosanska kuća iz 19. stoljeća, izgrađena za trgovačku porodicu Eminagić. Građen je na tradicionalan način, upotrebom ćerpića i drveta, s podrumom, prizemljem i spratom. Prizemlje je imalo praktičnu svrhu, dok se na spratu nalazi reprezentativna 'begova soba' s dekorativnim stropom i pogledom na Gradinu. Konak vjerno prikazuje način života tešanjskog građanstva iz osmanskog perioda. Godine 2011. obnovljen je i zaštićen kao nacionalni spomenik Bosne i Hercegovine pod upravom Muzeja Tešanj."
+                    />
                     <figcaption>Eminagića konak</figcaption>
                 </figure>
 
                 <figure class="card tall">
-                    <img src="images/GRADINA.jpg" alt="Gradina">
+                    <img
+                        src="images/GRADINA.jpg"
+                        alt="Gradina"
+                        data-desc="Tešanjska Gradina ili Stari grad Tešanj je srednjovjekovna tvrđava smještena na strmoj stijeni iznad rijeke Tešanjke. Nalazi iz bronzanog doba pokazuju da je lokacija bila naseljena još u prahistoriji. Njen položaj omogućavao je nadzor nad okolnim područjem i bio je ključan za obranu naselja kroz stoljeća. Utvrda je građena i dograđivana u više historijskih faza, od srednjeg vijeka do osmanskog perioda. Posebno je poznata po tome što je odoljela napadu Eugena Savojskog krajem 17. stoljeća. Danas je Gradina obnovljena kao kulturni spomenik, a u njoj se nalazi stalna muzejska postavka."
+                    />
                     <figcaption>Gradina</figcaption>
                 </figure>
 
                 <figure class="card">
-                    <img src="images/KATOLICKA CRKVA.jpg" alt="Katolička crkva">
+                    <img
+                        src="images/KATOLICKA CRKVA.jpg"
+                        alt="Katolička crkva"
+                        data-desc="Crkva svetog Petra i Pavla u Tešnju je katolička crkva smještena u blizini izvora Zvečaj, u podgrađu tešanjske Gradine. Izgrađena je 1910. godine prema projektu poznatog arhitekte Josipa Vancaša. Njena eklektična arhitektura kombinuje neoromanički i neogotički stil, a prepoznatljiv je visoki toranj s ukrašenom fasadom. Danas je zaštićena kao nacionalni spomenik Bosne i Hercegovine i simbol duhovnog života lokalne zajednice."
+                    />
                     <figcaption>Katolička crkva</figcaption>
                 </figure>
 
                 <figure class="card">
-                    <img src="images/DZAMIJA.jpg" alt="Drvena džamija">
-                    <figcaption>Drvena džamija</figcaption>
+                    <img
+                        src="images/DZAMIJA.jpg"
+                        alt="Čaršijska džamija"
+                        data-desc="Gazi Ferhad-begova džamija, ili Čaršijska džamija, jedna je od najstarijih i najvažnijih sakralnih građevina u Tešnju. Podignuta je između 1555. i 1558. godine, a njen osnivač, Gazi Ferhad-beg, bio je ključna figura u razvoju Tešnja kao urbanog centra. Džamija je imala krov od drvene šindre, a u unutršanjosti drvenu potkupolu, što je rijetkost u Bosni i Hercegovini. Tokom historije više puta je oštećena i obnavljana, tako je zapaljena u pohodu Eugena Savojskog 1697. godine. Nedavno je opsežno restaurirana, uključujući munaru, unutrašnjost i likovne ukrase čime joj je vraćen autentičan izgled. Danas je zaštićena kao nacionalni spomenik."
+                    />
+                    <figcaption>Čaršijska džamija</figcaption>
                 </figure>
 
                 <figure class="card">
-                    <img src="images/PRAVOSLAVNA CRKVA.jpg" alt="Pravoslavna crkva">
+                    <img
+                        src="images/PRAVOSLAVNA CRKVA.jpg"
+                        alt="Pravoslavna crkva"
+                        data-desc="Pravoslavna crkva Presvetog Pokrova Bogorodice u Tešnju građena je između 1934. i 1971. godine. Ranije, tokom 19. stoljeća, postojala je druga crkva koja je zbog trošnosti i propadanja terena morala biti zamijenjena. Crkva je poznata po svojoj zbirci ikona koje se sada čuvaju u Bijeljini, a koje datiraju od polovine XVI stoljeća do početka XX stoljeća. Zbirka obuhvata 65 domaćih i 35 uvezenih ikona i slika, čineći je važnim svjedočanstvom o historiji Tešnja tokom posljednjih 350 godina. Ova zbirka ikona ubraja se među četiri najvrednije u Bosni i Hercegovini."
+                    />
                     <figcaption>Pravoslavna crkva</figcaption>
                 </figure>
             </div>
@@ -99,13 +145,19 @@
             <div class="col">
                 <h2>O projektu</h2>
                 <p>
-                    Nakon što su učenici ispitali potrebe zajednice te proveli istraživanje uz podršku nastavnika, započeli su realizaciju projekta. Na radionicama su osmislili i naslikali vlastite ideje o najljepšim i najzanimljivijim mjestima u Tešnju. Potom su crteži pretvoreni u profesionalne letke i razglednice, koje predstavljaju spoj učeničke mašte i bogate kulturno-historijske baštine grada Tešnja. Kao završni korak, učenici su na ovoj web stranici predstavili svoj promotivni materijal u obliku razglednica i letaka. Pored toga, na svaku razglednicu i letak dodat je NFC tag i QR kod, putem kojih korisnici skeniranjem mogu dobiti informacije o prikazanoj slici.
-               </p>
+                    Nakon što su učenici ispitali potrebe zajednice te proveli istraživanje uz podršku nastavnika,
+                    započeli su realizaciju projekta. Na radionicama su osmislili i naslikali vlastite ideje o
+                    najljepšim i najzanimljivijim mjestima u Tešnju. Potom su crteži pretvoreni u profesionalne letke i
+                    razglednice, koje predstavljaju spoj učeničke mašte i bogate kulturno-historijske baštine grada
+                    Tešnja. Kao završni korak, učenici su na ovoj web stranici predstavili svoj promotivni materijal u
+                    obliku razglednica i letaka. Pored toga, na svaku razglednicu i letak dodat je NFC tag i QR kod,
+                    putem kojih korisnici skeniranjem mogu dobiti informacije o prikazanoj slici.
+                </p>
             </div>
 
             <div class="col card-embed">
                 <div class="embed">
-                    <img src="images/about.jpg" alt="Project overview image">
+                    <img src="images/OVERVIEW.jpg" alt="O projektu" />
                 </div>
             </div>
         </div>
@@ -113,14 +165,21 @@
 
     <footer class="site-footer">
         <div class="container foot">
-            <small>© <span id="year"></span>Presentation Project</small>
+            <small>© <span id="year"></span> Presentation Project</small>
         </div>
     </footer>
 
     <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-inner">
+            <div class="modal-media">
+                <img class="modal-img" alt="" />
+            </div>
+            <div class="modal-text">
+                <h3 class="modal-cap"></h3>
+                <p class="modal-desc"></p>
+            </div>
+        </div>
         <button class="modal-close">×</button>
-        <img class="modal-img" alt="" />
-        <figcaption class="modal-cap"></figcaption>
         <button class="modal-nav prev">‹</button>
         <button class="modal-nav next">›</button>
     </div>
@@ -128,4 +187,3 @@
     <script src="script.js" defer></script>
 </body>
 </html>
-
